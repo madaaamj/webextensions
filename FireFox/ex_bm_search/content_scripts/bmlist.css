@@ -1,0 +1,50 @@
+/* general styles */
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Font Awesome*/
+.fa-ul {
+  margin-left: 0px;
+}
+
+/* フローティングボタン */
+#fab{
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  background: #ffc107;
+  border-radius: 10%;
+}
+#fab a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#fab a:hover {
+  opacity: 0.5;
+}
+#fab a::before{
+  /* Font Awesome*/
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f139';
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 25px;
+  color: black;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  margin: auto;
+  text-align: center;
+}

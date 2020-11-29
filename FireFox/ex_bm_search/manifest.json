@@ -1,0 +1,44 @@
+{
+  "description": "ExBmSearch('A [Ex]tension for [B]ook[m]ark [Search]' is a extension for a FireFox bookmark with Tags",
+  "manifest_version": 2,
+  "name": "ExBmSearch",
+  "version": "1.0",
+  "homepage_url": "https://github.com/madaaamj/webextensions/tree/main/FireFox/ex_bm_search",
+  "icons": {
+    "48": "icons/ic_book_black_36dp.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "find"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/ic_book_black_36dp.png",
+    "theme_icons": [{
+        "light": "icons/ic_book_black_36dp.png",
+        "dark": "icons/ic_book_black_36dp.png",
+        "size": 32
+    }],
+    "default_title": "ExBmSearch"
+  },
+  
+  "background": {
+    "scripts": ["background_scripts/background.js"]
+  },
+
+  "content_security_policy": "script-src 'self' https://*.jquery.com https://*.jsdelivr.net https://*.fontawesome.com; object-src 'self'",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/bmlist.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ExBmSearch@madaaamj.com"
+    }
+  }
+}
